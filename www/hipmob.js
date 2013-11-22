@@ -13,7 +13,7 @@ var openChat = function(appid, options, success, failure){
 	'title': 'Support Chat'
     };
     var args = [appid];
-    if('title' in options) args.push(options['title']);
+    if(options && 'title' in options) args.push(options['title']);
     else args.push(default_options['title']);
     exec(success, failure, 'Hipmob', 'openChat', args);
 };

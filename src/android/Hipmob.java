@@ -20,7 +20,8 @@ public class Hipmob extends CordovaPlugin
 	    try{
 		Intent i = new Intent(cordova.getActivity(), HipmobCore.class);
 		i.putExtra(HipmobCore.KEY_APPID, args.get(0).toString());
-		i.putExtra(HipmobCore.KEY_TITLE, args.get(1).toString());			    
+		i.putExtra(HipmobCore.KEY_TITLE, args.get(1).toString());
+		cordova.getActivity().startActivity(i);			    
 		callbackContext.sendPluginResult(new PluginResult(Status.OK));
 	    }catch(Exception e1){
 		callbackContext.sendPluginResult(new PluginResult(Status.ERROR, "Missing app id or title"));

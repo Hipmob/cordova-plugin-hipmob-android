@@ -18,9 +18,7 @@ To use the Hipmob library, you'll need to get a free account at https://www.hipm
         var hipmob_app_id = '<HIPMOB APPLICATION ID>';
         var Hipmob = window.plugins.Hipmob;
     
-        Hipmob.openChat({	
-	  'appid': hipmob_app_id
-	});
+        Hipmob.openChat(hipmob_app_id);
     } else {
       alert('Hipmob plugin not available/ready.');
     }

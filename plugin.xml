@@ -28,7 +28,7 @@
     
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Hipmob">
-	<param name="android-package" value="com.hipmob.android.phonegap.plugin" />
+	<param name="android-package" value="com.hipmob.android.phonegap.plugin.Hipmob" />
       </feature>
     </config-file>
     
@@ -39,7 +39,7 @@
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <activity android:name="com.hipmob.android..HipmobCore" android:label="@string/app_name">
+      <activity android:name="com.hipmob.android.HipmobCore" android:label="@string/app_name">
       </activity>
       <activity android:name="com.hipmob.android.HipmobHelpDeskArticleViewActivity" android:label="@string/app_name">
       </activity>
