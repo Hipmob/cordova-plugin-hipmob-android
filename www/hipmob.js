@@ -9,15 +9,28 @@
 var exec = cordova.require('cordova/exec');
 
 var openChat = function(appid, options, success, failure){
-    var default_options = {
-	'title': 'Support Chat'
-    };
-    var args = [appid];
-    if(options && 'title' in options) args.push(options['title']);
-    else args.push(default_options['title']);
+    var opts = {};
+    if(options && typeof options == 'object') opts = options;
+    var args = [appid, opts];
     exec(success, failure, 'Hipmob', 'openChat', args);
 };
 
+var openHelpdeskSearch = function(appid, options, success, failure){
+    var opts = {};
+    if(options && typeof options == 'object') opts = options;
+    var args = [appid, opts];
+    exec(success, failure, 'Hipmob', 'openHelpdeskSearch', args);
+};
+
+var openHelpdeskArticle = function(appid, url, options, success, failure){
+    var opts = {};
+    if(options && typeof options == 'object') opts = options;
+    var args = [appid, url, opts];
+    exec(success, failure, 'Hipmob', 'openHelpdeskArticle', args);
+};
+
 module.exports = {
-    openChat: openChat
+    openChat: openChat,
+    openHelpdeskSearch: openHelpdeskSearch,
+    openHelpdeskArticle: openHelpdeskArticle
 };

@@ -18,8 +18,52 @@ To use the Hipmob library, you'll need to get a free account at https://www.hipm
         var hipmob_app_id = '<HIPMOB APPLICATION ID>';
         var Hipmob = window.plugins.Hipmob;
     
-        Hipmob.openChat(hipmob_app_id);
+        Hipmob.openChat(hipmob_app_id, {
+	'title': 'Help',
+	'user': '<hipmob user id>',
+	'name': 'Femi',
+	'email': 'femi@hipmob.com',
+	'context': 'shopping for shoes',
+	'location': 'At home'
+	});
+    } else {
+      alert('Hipmob plugin not available/ready.');
+    }
+
+To open a helpdesk search window, you can do:
+
+    if( window.plugins && window.plugins.Hipmob ) {
+        var hipmob_app_id = '<HIPMOB APPLICATION ID>';
+        var Hipmob = window.plugins.Hipmob;
+    
+        Hipmob.openHelpdeskSearch(hipmob_app_id, {
+	'title': 'Help',
+	'query': 'Android',
+	'user': '<hipmob user id>',
+	'name': 'Femi',
+	'email': 'femi@hipmob.com',
+	'context': 'shopping for shoes',
+	'location': 'At home'
+	});
     } else {
       alert('Hipmob plugin not available/ready.');
     }
     
+To open an instant help window, you can do:
+
+    if( window.plugins && window.plugins.Hipmob ) {
+        var hipmob_app_id = '<HIPMOB APPLICATION ID>';
+	var helpdesk_article_url = '<helpdesk article url>';
+        var Hipmob = window.plugins.Hipmob;
+    
+        Hipmob.openHelpdeskArticle(hipmob_app_id, helpdesk_article_url, {
+	'title': 'Help',
+	'user': '<hipmob user id>',
+	'name': 'Femi',
+	'email': 'femi@hipmob.com',
+	'context': 'shopping for shoes',
+	'location': 'At home'
+	});
+    } else {
+      alert('Hipmob plugin not available/ready.');
+    }
