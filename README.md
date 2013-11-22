@@ -8,7 +8,13 @@ Installation
 ---------------------------
 Install the plugin using the Cordova command-line interface:
 
-cordova plugin add https://github.com/hipmob/cordova-plugin-hipmob-android.git
+    cordova plugin add https://github.com/hipmob/cordova-plugin-hipmob-android.git
+
+On Windows, you may have issues with the install (we've observed Git errors when trying to do the fetch). If that's the case, you'll want to clone the repository and then do a local add: ***make sure you clone the plugin to a directory outside your app***.
+
+    git clone https://github.com/hipmob/cordova-plugin-hipmob-android.git <directory location of plugin>
+    cd <root of application>
+    cordova plugin add <directory location of plugin>
 
 Usage
 ---------------------------
