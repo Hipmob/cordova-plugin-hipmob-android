@@ -2,12 +2,12 @@ package com.hipmob.android.phonegap.plugin;
 
 import org.apache.cordova.PluginResult;
 import org.apache.cordova.PluginResult.Status;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import 
+import android.content.Intent;
 import com.hipmob.android.HipmobCore;
 
 public class Hipmob extends CordovaPlugin 
@@ -19,8 +19,8 @@ public class Hipmob extends CordovaPlugin
 	if("openChat".equals(action)){
 	    try{
 		Intent i = new Intent(cordova.getActivity(), HipmobCore.class);
-		i.putExtra(HipmobCore.KEY_APPID, data.get(0).toString());
-		i.putExtra(HipmobCore.KEY_TITLE, data.get(1).toString());			    
+		i.putExtra(HipmobCore.KEY_APPID, args.get(0).toString());
+		i.putExtra(HipmobCore.KEY_TITLE, args.get(1).toString());			    
 		callbackContext.sendPluginResult(new PluginResult(Status.OK));
 	    }catch(Exception e1){
 		callbackContext.sendPluginResult(new PluginResult(Status.ERROR, "Missing app id or title"));
