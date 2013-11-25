@@ -30,6 +30,8 @@
       <feature name="Hipmob">
 	<param name="android-package" value="com.hipmob.android.phonegap.plugin.Hipmob" />
       </feature>
+      <access origin="https://hipmob.s3.amazonaws.com/*" />
+      <access origin="https://babble.hipmob.com/*" />
     </config-file>
     
     <config-file target="AndroidManifest.xml" parent="/*">
