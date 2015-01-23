@@ -32,6 +32,7 @@
       </feature>
       <access origin="https://hipmob.s3.amazonaws.com/*" />
       <access origin="https://babble.hipmob.com/*" />
+      <access origin="https://hipmobusercontent.s3.amazonaws.com/*" />
     </config-file>
     
     <config-file target="AndroidManifest.xml" parent="/*">
@@ -41,11 +42,11 @@
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <activity android:name="com.hipmob.android.HipmobCore" android:label="@string/app_name" android:theme="@style/HipmobThemeSelector">
+      <activity android:name="com.hipmob.android.HipmobCore" android:theme="@style/HipmobThemeSelector">
       </activity>
-      <activity android:name="com.hipmob.android.HipmobHelpDeskArticleViewActivity" android:label="@string/app_name" android:theme="@style/HipmobThemeSelector">
+      <activity android:name="com.hipmob.android.HipmobHelpDeskArticleViewActivity" android:theme="@style/HipmobThemeSelector">
       </activity>
-      <activity android:name="com.hipmob.android.HipmobHelpDeskSearchActivity" android:label="@string/app_name" android:theme="@style/HipmobThemeSelector">
+      <activity android:name="com.hipmob.android.HipmobHelpDeskSearchActivity" android:theme="@style/HipmobThemeSelector">
       </activity>
     </config-file>
 
