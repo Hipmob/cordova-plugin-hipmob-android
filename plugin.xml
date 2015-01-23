@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="com.hipmob.android.phonegap.plugin"
-	version="1.1.1">
+	version="1.1.2">
   
   <name>Hipmob</name>
 
@@ -50,7 +50,7 @@
       </activity>
     </config-file>
 
-    <asset src="src/android/styles.xml" target="../../res/values/hipmob-styles.xml" />
-    <asset src="src/android/styles-v11.xml" target="../../res/values-v11/hipmob-styles.xml" />
+    <resource-file src="src/android/styles.xml" target="res/values/hipmob-styles.xml" />
+    <resource-file src="src/android/styles-v11.xml" target="res/values-v11/hipmob-styles.xml" />
   </platform>  
 </plugin>
