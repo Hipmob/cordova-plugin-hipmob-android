@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="com.hipmob.android.phonegap.plugin"
-	version="1.2.0">
+	version="1.2.1">
   
   <name>Hipmob</name>
 
@@ -51,6 +51,8 @@
       <activity android:name="com.hipmob.android.HipmobHelpDeskArticleViewActivity" android:theme="@style/HipmobThemeSelector">
       </activity>
       <activity android:name="com.hipmob.android.HipmobHelpDeskSearchActivity" android:theme="@style/HipmobThemeSelector">
+      </activity>
+      <activity android:name="com.hipmob.android.HipmobNotificationTargetActivity" android:theme="@style/HipmobThemeSelector">
       </activity>
       <receiver
 	  android:name="com.hipmob.android.HipmobPushReceiver"
