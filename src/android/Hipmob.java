@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import com.hipmob.android.HipmobCore;
+import com.hipmob.android.HipmobRemoteConnection;
 import com.hipmob.android.HipmobHelpDeskSearchActivity;
 import com.hipmob.android.HipmobHelpDeskArticleViewActivity;
 
@@ -111,6 +112,14 @@ public class Hipmob extends CordovaPlugin
 		callbackContext.sendPluginResult(new PluginResult(Status.OK));
 	    }catch(Exception e1){
 		callbackContext.sendPluginResult(new PluginResult(Status.ERROR, "Missing app id or title"));
+	    }
+	    return true;
+	}else if("reconnectChat".equals(action)){
+	    try{
+		HipmobRemoteConnection.reconnectChat(cordova.getActivity());
+		callbackContext.sendPluginResult(new PluginResult(Status.OK));
+	    }catch(Exception e1){
+		callbackContext.sendPluginResult(new PluginResult(Status.ERROR, "Exception requesting reconnect"));
 	    }
 	    return true;
 	}
