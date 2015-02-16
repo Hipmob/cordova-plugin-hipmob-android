@@ -34,9 +34,15 @@ var reconnectChat = function()
     exec(function(winParam) {}, function(error) {}, 'Hipmob', 'reconnectChat', []);
 };
 
+var setupPush = function(sender_id)
+{
+    exec(function(winParam) {}, function(error) {}, 'Hipmob', 'setupPush', [sender_id]);
+};
+
 module.exports = {
     openChat: openChat,
     openHelpdeskSearch: openHelpdeskSearch,
     openHelpdeskArticle: openHelpdeskArticle,
-    reconnectChat: reconnectChat
+    reconnectChat: reconnectChat,
+    setupPush: setupPush
 };
