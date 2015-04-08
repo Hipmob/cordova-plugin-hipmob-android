@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="com.hipmob.android.phonegap.plugin"
-	version="1.6.9">
+	version="1.7.0">
   
   <name>Hipmob</name>
 
@@ -23,6 +23,7 @@
   </js-module>
   
   <platform name="android">
+    <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" commit="1f56399572d255193f8f9564843df60e50938e69" />
     <source-file src="src/android/Hipmob.java" target-dir="src/com/hipmob/android/phonegap/plugin/" />
     <source-file src="src/android/android-hipmob.jar" target-dir="libs" />
     
@@ -39,10 +40,12 @@
       <uses-permission android:name="android.permission.INTERNET" />
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
       <uses-permission android:name="android.permission.RECORD_AUDIO" />
-      <uses-permission android:name="com.hipmob.android.permission.C2D_MESSAGE" />   
+      <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" />   
       <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
       <uses-permission android:name="android.permission.GET_ACCOUNTS" />
       <uses-permission android:name="android.permission.WAKE_LOCK" />
+      <uses-permission android:name="android.permission.VIBRATE" />
+      <permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" android:protectionLevel="signature" />   
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
@@ -55,15 +58,15 @@
       <activity android:name="com.hipmob.android.HipmobNotificationTargetActivity" android:theme="@style/HipmobThemeSelector">
       </activity>
       <receiver
-	  android:name="com.hipmob.android.HipmobPushReceiver"
+	  android:name="com.hipmob.android.HipmobPlayPushReceiver"
 	  android:permission="com.google.android.c2dm.permission.SEND" >
 	<intent-filter>
 	  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 	  <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-	  <category android:name="com.hipmob.android" />
+	  <category android:name="$PACKAGE_NAME" />
 	</intent-filter>
       </receiver>
-      <service android:name="com.hipmob.android.HipmobPushService" />
+      <service android:name="com.hipmob.android.HipmobPlayPushService" />
     </config-file>
     
     <resource-file src="src/android/styles.xml" target="res/values/hipmob-styles.xml" />
