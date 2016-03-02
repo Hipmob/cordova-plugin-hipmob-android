@@ -23,7 +23,7 @@
   </js-module>
   
   <platform name="android">
-    <dependency id="com-google-play-services" url="https://github.com/appfeel/google-play-services" commit="8a2a475ae63a53cb861e23cca294d8ce08ab8057" />
+    <dependency id="cordova-google-play-services" url="https://github.com/appfeel/google-play-services" commit="8a2a475ae63a53cb861e23cca294d8ce08ab8057" />
     <source-file src="src/android/Hipmob.java" target-dir="src/com/hipmob/android/phonegap/plugin/" />
     <source-file src="src/android/android-hipmob.jar" target-dir="libs" />
     
