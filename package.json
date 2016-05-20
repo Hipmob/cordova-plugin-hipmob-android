@@ -1,0 +1,45 @@
+{
+  "name": "Hipmob",
+  "version": "1.7.4",
+  "description": "Hipmob provides an in-app live chat and helpdesk for mobile apps.",
+  "cordova": {
+    "id": "com.hipmob.android.phonegap.plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Hipmob/cordova-plugin-hipmob-android.git"
+  },
+  "keywords": [
+    "real-time",
+    "live chat",
+    "cobrowsing",
+    "screensharing",
+    "customer support",
+    "support",
+    "helpdesk",
+    "QA",
+    "sales",
+    "demos",
+    "demonstrations push notifications",
+    "push messaging",
+    "push alerts",
+    "push",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=2.9"
+    }
+  ],
+  "author": "Femi Omojola <femi@hipmob.com>",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/Hipmob/cordova-plugin-hipmob-android/issues"
+  },
+  "homepage": "https://github.com/Hipmob/cordova-plugin-hipmob-android#readme"
+}
